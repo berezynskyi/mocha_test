@@ -1,0 +1,23 @@
+<div ng-app="mochaTest">
+    <div ng-controller="mochaCtrl">
+        <button ng-click="showHide()">New Article</button>
+            <div ng-show="clicked">
+                <br>
+                <li>title : <input type="text" ng-model="title"></li>
+                <li>text : <textarea type="text" ng-model="text"></textarea></li>
+                <button ng-click="addArticle()">Add new Article</button>
+                <br>
+            </div>
+
+        <button ng-click="getListOfArticles()">Get List Of Articles</button>
+            <div ng-repeat="article in list">
+                <li ng-click="getArticleById(article._id, $index)"><a href="">{{article.title}}</a>
+                    <div ng-show="showText[$index]">{{text[$index]}}</div>
+                </li>
+                
+            </div>
+    </div>
+</div>
+    <script src="/dependencies/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="/controllers/articleController.js"></script>

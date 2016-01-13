@@ -1,0 +1,16 @@
+{
+  "name": "mocha_express",
+  "version": "1.0.0",
+  "description": "testing mocha",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo"
+  },
+  "author": "berezynskyi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.5"
+  }
+}
