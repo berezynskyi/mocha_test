@@ -14,8 +14,8 @@ db.once('open', function callback () {
 var Schema = mongoose.Schema;
 
 var Article = new Schema({
-    title: { type: String},
-    text: { type: String}
+    title: { type: String, required: true},
+    text: { type: String, required: true}
 });
 
 var ArticleModel = mongoose.model('articles', Article);
