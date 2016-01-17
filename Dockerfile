@@ -4,13 +4,7 @@ FROM    centos:centos6
 RUN     yum install -y epel-release
 # Install Node.js and npm
 RUN     yum install -y nodejs npm
-
-# Install app dependencies
-COPY package.json package.json
-RUN cd /; npm install
-
-# Bundle app source
-COPY . /
+RUN npm install
 
 EXPOSE  3000
 CMD ["mocha"]
